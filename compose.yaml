@@ -1,0 +1,16 @@
+
+services:
+  medva:
+    build: .
+    container_name: medva
+    env_file:
+      - .env
+    
+    networks:
+      - web
+    restart: always
+
+ 
+networks:
+  web:
+    external: true
